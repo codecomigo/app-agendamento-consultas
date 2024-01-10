@@ -1,8 +1,108 @@
-.inicial h1, button{
-    margin-left: 8px;
-    display: inline-block;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-table, td, th{
-    border: 1px solid black;
+:root{
+    --primary-color: #FFBA00;
+    --secundary-color: #FFF1CC;
+    --shadow-color: #CCC;
+    --text-color: #FFF;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    position: relative;
+}
+
+header{
+    /* background-color: var(--primary-color); */
+    background-color: #FFBA00;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    /* box-shadow: 0 1px 2px var(--shadow-color); */
+    box-shadow: 0 1px 2px #CCC;
+}
+
+.header-title{
+    color: black;
+    font-size: 2rem;
+    font-family: 'Poppins';
+}
+
+.records{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+}
+
+.records th{
+    height: 50px;
+    padding-left: 20px;
+    font-size: 1.2rem;    
+}
+
+.records td{
+    height: 50px;
+    padding-left: 20px;
+}
+
+.records th:last-child,
+.records td:last-child{
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.button{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+}
+
+.button.blue{
+    background-color: #1FB6FF;
+}
+
+button.green{
+    background-color: #13CE66;
+}
+
+button.red{
+    background-color: #FF4949;
+}
+
+@media(max-width:480px){
+    .records{
+        border-spacing: 5px;
+    }
+    .records thead{
+        display:none;
+    }
+    .records tr{
+        box-shadow: 0 1px 3px var(--shadow-color);
+    }
+    .records td:not(:first-child){
+        display:flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .records td{
+        margin:10px 0;
+    }
+
+    .records tr:hover{
+        background-color: inherit;
+    }
 }
