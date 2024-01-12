@@ -11,4 +11,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'app-agendamento-consultas';
+
+  cadastrarCliente(): void{
+    console.log("Cadastrar cliente.");
+  }
 }

@@ -4,14 +4,15 @@
     <h1 class="header-title">Minhas consultas cadastradas</h1>
   </header>
   <main>
-    <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+    <button type="button" (click)="cadastrarCliente()" class="button blue mobile" id="cadastrarCliente">Cadastrar
+      Consulta</button>
     <table class="records">
       <thead>
         <tr>
           <th>Especialidade</th>
           <th>Data</th>
           <th>Hora</th>
-          <th>Autorização?</th>
+          <th>Autorização</th>
           <th>Local</th>
           <th>Ação</th>
         </tr>
@@ -22,18 +23,27 @@
           <!-- <td>maria&#64;gmail.com</td> -->
           <td>Calendario com datas</td>
           <td>08:30</td>
-          <td>Select com Sim, Não precisa</td>
+          <td>
+            <form action="/action_page.php">
+              <label for="autorizacao">Possui autorização?</label>
+              <select name="autorizacao" id="autorizacao">
+                <option value="sim">Sim</option>
+                <option value="não">Não precisa</option>
+              </select>
+              <br><br>
+            </form>
+          </td>
           <td>Select com locais de clinicas</td>
           <td>
-              <button type="button" class="button green">editar</button>
-              <button type="button" class="button red">excluir</button>
+            <button type="button" class="button green">editar</button>
+            <button type="button" class="button red">excluir</button>
           </td>
-      </tr>
+        </tr>
       </tbody>
     </table>
   </main>
   <footer>
-    footer
+    Copyright &copy; Andressa Silva
   </footer>
 
 </body>
