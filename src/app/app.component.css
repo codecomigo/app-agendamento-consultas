@@ -103,6 +103,17 @@ footer {
     padding: 20px;
 }
 
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #00000090;
+    opacity: 0;
+    z-index: -1;
+}
+
 @media(max-width:480px) {
     .records {
         border-spacing: 5px;

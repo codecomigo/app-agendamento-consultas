@@ -15,4 +15,5 @@ export class AppComponent {
   cadastrarCliente(): void{
     console.log("Cadastrar cliente.");
   }
+
 }
